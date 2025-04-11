@@ -83,26 +83,8 @@ footer {
   padding: 1rem;
   background: #eee;
   color: #555;
-.nav-links a.nav-button {
-  background-color: #222;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: 500;
-  font-size: 1rem;
-  border: 1px solid transparent;
-}
-
-.nav-links a.nav-button:hover {
-  background-color: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-.navbar {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+<nav class="nav-links">
+  <a href="#products" class="nav-button">Products</a>
+  <a href="#about" class="nav-button">About</a>
+  <a href="#contact" class="nav-button">Contact</a>
+</nav>
