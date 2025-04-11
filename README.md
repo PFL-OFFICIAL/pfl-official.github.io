@@ -4,13 +4,13 @@ This website is still a work in progress
 
 
 
-Version:0.12.1
+Version:0.12
 
 
 
 UPDATE LIST
 ---------------------------
 
-4/10/25:Fixed toolbar; added first real item
+0.11: Fixed toolbar; added first real item
 
-4/10/25: Working on mobile device screen; The menu
+0.12: Working on mobile device screen; The menu
