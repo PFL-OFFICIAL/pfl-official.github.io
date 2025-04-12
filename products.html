@@ -93,6 +93,23 @@
   </main>
 
   <script>
+  const searchBar = document.getElementById("searchBar");
+  const products = document.querySelectorAll(".product");
+
+  searchBar.addEventListener("input", () => {
+    const searchText = searchBar.value.trim().toLowerCase();
+
+    products.forEach(product => {
+      const name = product.getAttribute("data-name").toLowerCase();
+      if (name.includes(searchText)) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  });
+</script>
+
     const searchBar = document.getElementById("searchBar");
     const products = document.querySelectorAll(".product");
 
