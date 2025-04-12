@@ -5,6 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Products</title>
   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Our Products</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <input type="text" id="searchBar" placeholder="Search for a product..." />
+
+    <div class="product-list" id="productList">
+      <div class="product" data-name="Red T-Shirt">
+        <h3>Red T-Shirt</h3>
+        <p>A comfy red tee for everyday wear.</p>
+      </div>
+      <div class="product" data-name="Blue Hoodie">
+        <h3>Blue Hoodie</h3>
+        <p>Stay warm and stylish with this hoodie.</p>
+      </div>
+      <div class="product" data-name="Sticker Pack">
+        <h3>Sticker Pack</h3>
+        <p>5-pack of high quality vinyl stickers.</p>
+      </div>
+      <div class="product" data-name="Black Cap">
+        <h3>Black Cap</h3>
+        <p>Keep it cool and shady with this classic cap.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const products = document.querySelectorAll(".product");
+
+    searchBar.addEventListener("input", () => {
+      const searchText = searchBar.value.toLowerCase();
+      products.forEach(product => {
+        const name = product.getAttribute("data-name").toLowerCase();
+        product.style.display = name.includes(searchText) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+  <head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
