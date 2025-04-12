@@ -4,71 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Products</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      padding: 1em;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      max-width: 1000px;
+    main.products-page {
+      max-width: 1200px;
       margin: auto;
-      padding: 2em;
-      background: white;
+      padding: 2rem;
     }
-    input[type="text"] {
+
+    #searchBar {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      font-size: 1em;
+      padding: 0.75rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 999px;
     }
+
     .product-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1em;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
+
     .product {
-      border: 1px solid #ccc;
+      background: #fff;
       border-radius: 10px;
-      padding: 1em;
-      background: #fafafa;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
+
     .product h3 {
-      margin-top: 0;
+      margin-top: 0.5rem;
+    }
+
+    .product p {
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Our Products</h1>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">PrintForgeLimited</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-button">Home</a></li>
+          <li><a href="register.html" class="nav-button">Register</a></li>
+          <li><a href="login.html" class="nav-button">Login</a></li>
+          <li><a href="profile.html" class="nav-button">Profile</a></li>
+          <li><a href="products.html" class="nav-button">Products</a></li>
+          <li><a href="about.html" class="nav-button">About</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
+  <!-- Product Search and Grid -->
+  <main class="products-page">
     <input type="text" id="searchBar" placeholder="Search for a product..." />
 
     <div class="product-list" id="productList">
@@ -88,13 +84,19 @@
         <h3>Black Cap</h3>
         <p>Keep it cool and shady with this classic cap.</p>
       </div>
-      <!-- Add more products below as needed -->
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PrintForgeLimited</p>
+  </footer>
+
+  <!-- Search Script -->
   <script>
     const searchBar = document.getElementById("searchBar");
     const products = document.querySelectorAll(".product");
+
     searchBar.addEventListener("input", () => {
       const searchText = searchBar.value.toLowerCase();
       products.forEach(product => {
@@ -103,5 +105,6 @@
       });
     });
   </script>
+
 </body>
 </html>
