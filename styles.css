@@ -1,4 +1,3 @@
-/* Reset default margin and padding for all elements */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Body Styling */
 body {
   background: #f7f7f7;
   color: #333;
@@ -109,13 +107,9 @@ footer {
 .nav-links {
   display: flex;
   gap: 1rem;
-  list-style: none; /* Remove the dots from the list */
+  list-style: none; /* Ensure there's no bullet point */
   padding: 0; /* Remove any default padding from the list */
-  margin: 0; /* Remove any default margin */
-}
-
-.nav-links li {
-  margin: 0; /* Remove any margin from list items */
+  margin: 0; /* Remove any default margin from the list */
 }
 
 .nav-button {
@@ -136,9 +130,4 @@ footer {
   background-color: white;
   color: black;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
-
-.nav-button.active {
-  background-color: #f56400;
-  color: white;
 }
