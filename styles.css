@@ -103,6 +103,7 @@ footer {
   text-decoration: none;
 }
 
+/* Navbar Links as Buttons */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -110,20 +111,4 @@ footer {
 
 .nav-button {
   background-color: #1f1f1f;
-  color: white;
-  padding: 0.7rem 1.6rem;
-  border: none;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.nav-button:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
+  color: white
