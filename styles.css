@@ -1,4 +1,4 @@
-W* {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -50,6 +50,7 @@ main.product-grid {
 .product p {
   font-size: 1rem;
   color: #666;
+  user-select: none; /* Prevent text selection */
 }
 
 /* Buy Button */
@@ -130,33 +131,6 @@ footer {
   background-color: white;
   color: black;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-}
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-  color: #333;
-}
-
-header {
-  background: #222;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-nav {
-  background: #444;
-  padding: 1em;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 /* Search Bar Styles */
