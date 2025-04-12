@@ -6,85 +6,29 @@
 }
 
 body {
-  background: #f7f7f7;
+  background: #f0f2f5;
   color: #333;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* Header Section (Hero or Logo Area) */
+/* Header */
 header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #222;
+  background-color: #333;
   color: #fff;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Product Grid Styling */
-main.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.product {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 3rem 1rem;
   text-align: center;
-  width: 100%;
+  border-bottom: 3px solid #f56400;
 }
 
-.product img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
-.product h2 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.2rem;
-}
-
-.product p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Buy Button */
-.buy-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: #f56400; /* Etsy orange */
-  color: white;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background 0.3s;
-  font-weight: 500;
-  white-space: nowrap; /* Prevent text wrapping */
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.buy-button:hover {
-  background: #d45500;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  color: #555;
-}
-
-/* Navbar Styles */
+/* Navigation */
 .navbar {
   background-color: #000;
   padding: 1rem 0;
@@ -92,121 +36,180 @@ footer {
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping of nav items on small screens */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
-/* Navbar Links as Buttons */
 .nav-links {
   display: flex;
-  gap: 1rem;
-  list-style: none; /* Ensure there's no bullet point */
-  padding: 0; /* Remove any default padding from the list */
-  margin: 0; /* Remove any default margin from the list */
-  flex-wrap: wrap; /* Allow wrapping of nav items on small screens */
+  gap: 1.5rem;
+  list-style: none;
 }
 
 .nav-button {
-  background-color: #1f1f1f;
-  color: white;
-  padding: 0.7rem 1.6rem;
-  border: none;
-  border-radius: 999px;
+  color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  padding: 0.5rem 1rem;
+  background-color: #1f1f1f;
+  border-radius: 30px;
 }
 
 .nav-button:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  background-color: #f56400;
+  transform: scale(1.05);
 }
 
-/* Search Bar Styles */
-input[type="text"] {
-  width: 100%;
-  max-width: 600px; /* Max width for better appearance */
-  padding: 12px 20px; /* Adding padding */
-  margin: 20px auto; /* Centering with some space */
-  font-size: 1.2em;
-  border: 2px solid #ccc; /* Light border for a clean look */
-  border-radius: 30px; /* Rounded corners */
-  outline: none;
-  background: #fff;
-  transition: border-color 0.3s ease; /* Smooth border color transition */
+.nav-button:active {
+  background-color: #e55300;
 }
 
-input[type="text"]:focus {
-  border-color: #f56400; /* Change border color when focused */
+/* Main Content */
+main {
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
-/* Product List Styles */
-.product-list {
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1em;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .product {
-  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  padding: 1em;
-  background: #fafafa;
+  margin-bottom: 1rem;
 }
 
-.product h3 {
-  margin-top: 0;
+.product h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-/* Responsive Styles for Small Screens */
+.product p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #f56400;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+
+.buy-button:hover {
+  background-color: #e55300;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Search Bar */
+input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  outline: none;
+  margin: 2rem auto;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #f56400;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 0;
+    padding: 0.5rem;
   }
 
   .nav-container {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .nav-button {
+    padding: 0.5rem 1.2rem;
   }
 
-  .buy-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    width: 100%; /* Ensure buttons fit within screen on mobile */
-    box-sizing: border-box;
+  header {
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
   }
 
   .product-grid {
     padding: 1rem;
   }
 
-  /* Reduce gap between products on mobile */
-  .product-list {
-    gap: 1rem;
+  .buy-button {
+    padding: 0.7rem 1.2rem;
+  }
+
+  footer {
+    padding: 1rem;
   }
 }
