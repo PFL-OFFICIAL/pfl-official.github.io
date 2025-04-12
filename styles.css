@@ -1,3 +1,11 @@
+/* Navbar Links as Buttons */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* Remove the dots from the list */
+  padding: 0; /* Remove any default padding from the list */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
