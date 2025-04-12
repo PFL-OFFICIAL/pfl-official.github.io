@@ -8,6 +8,7 @@
 body {
   background: #f7f7f7;
   color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header Section (Hero or Logo Area) */
@@ -16,6 +17,8 @@ header {
   padding: 2rem 1rem;
   background-color: #222;
   color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Product Grid Styling */
@@ -34,6 +37,7 @@ main.product-grid {
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
 }
 
 .product img {
@@ -50,7 +54,6 @@ main.product-grid {
 .product p {
   font-size: 1rem;
   color: #666;
-  user-select: none; /* Prevent text selection */
 }
 
 /* Buy Button */
@@ -64,6 +67,9 @@ main.product-grid {
   text-decoration: none;
   transition: background 0.3s;
   font-weight: 500;
+  white-space: nowrap; /* Prevent text wrapping */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .buy-button:hover {
@@ -95,6 +101,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of nav items on small screens */
 }
 
 .logo {
@@ -111,6 +118,7 @@ footer {
   list-style: none; /* Ensure there's no bullet point */
   padding: 0; /* Remove any default padding from the list */
   margin: 0; /* Remove any default margin from the list */
+  flex-wrap: wrap; /* Allow wrapping of nav items on small screens */
 }
 
 .nav-button {
@@ -168,4 +176,37 @@ input[type="text"]:focus {
 
 .product h3 {
   margin-top: 0;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .buy-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 100%; /* Ensure buttons fit within screen on mobile */
+    box-sizing: border-box;
+  }
+
+  .product-grid {
+    padding: 1rem;
+  }
+
+  /* Reduce gap between products on mobile */
+  .product-list {
+    gap: 1rem;
+  }
 }
